@@ -5,8 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Pick_Level : MonoBehaviour
 {
-    public void LevelSelect()
+    public void Level1()
     {
         SceneManager.LoadScene("Test Level Tristan");
+    }
+
+    public void Help()
+    {
+        SceneManager.LoadScene("Help Screen");
     }
 }
