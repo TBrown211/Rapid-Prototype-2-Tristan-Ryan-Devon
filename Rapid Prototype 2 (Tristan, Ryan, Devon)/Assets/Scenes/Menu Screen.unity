@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 228432202}
   - component: {fileID: 228432201}
   m_Layer: 0
-  m_Name: Pick_Level
+  m_Name: Level_Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
