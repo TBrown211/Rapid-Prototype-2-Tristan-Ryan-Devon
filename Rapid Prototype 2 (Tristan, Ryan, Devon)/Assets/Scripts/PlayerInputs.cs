@@ -16,6 +16,11 @@ public class PlayerInputs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerMovement();
+    }
+
+    void PlayerMovement()
+    {
         //Assiging booleans to the key inputs
         bool movingLeft = Input.GetKey(KeyCode.A); //Pressing A key will move the player left
         bool movingRight = Input.GetKey(KeyCode.D); //Pressing the D key will move the player right
@@ -27,7 +32,7 @@ public class PlayerInputs : MonoBehaviour
         {
             input.x += -playerSpeed * Time.deltaTime;
         }
-        if(movingRight)
+        if (movingRight)
         {
             input.x += playerSpeed * Time.deltaTime;
         }
