@@ -4,19 +4,42 @@ using UnityEngine;
 
 public class PlayerInputs : MonoBehaviour
 {
+    //Variables for player inputs
     public float playerSpeed = 1.0f;  //Assigning a speed variable for the player
     public float jumpForce = 2.0f;
+
+    //Variables for the charge attack mechanic
+    private SpriteRenderer knightSP;
+    public float chargeTime = 0.0f;
+    private Rigidbody2D rb2D;
 
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(name);
+        Debug.Log(chargeTime);
+        rb2D = GetComponent<Rigidbody2D>();
+        knightSP = rb2D.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         PlayerMovement();
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            chargeTime += Time.deltaTime;
+        }
+        if (Input.GetKeyUp(KeyCode.R) && chargeTime > 2)
+        {
+            rb2D.velocity = Vector2.right * playerSpeed;
+            chargeTime = 0;
+
+        }
+        if(Input.GetKeyUp(KeyCode.R) && chargeTime < 2)
+        {
+            chargeTime = 0;
+        }
     }
 
     void PlayerMovement()
