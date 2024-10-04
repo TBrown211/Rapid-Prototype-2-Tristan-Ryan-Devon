@@ -7,14 +7,14 @@ public class PlayerInputs : MonoBehaviour
 {
     //Variables for player inputs
     public float playerSpeed = 1.0f;  //Assigning a speed variable for the player
-    public float jumpForce = 2.0f;
+    public float jumpForce = 2.0f; //Assigning force variable for jumping
     public float gravityForce = 1.0f;
-    private bool facingRight = true;
+    private bool facingRight = true; //Bool variable to determine whether the player is facing left or right
 
     //Variables for the charge attack mechanic
     [SerializeField] Sprite[] knightLib;
-    private SpriteRenderer knightSP;
-    public float chargeTime = 0.0f;
+    private SpriteRenderer knightSP; 
+    public float chargeTime = 0.0f; //variable to keep track of charge time
     private Rigidbody2D rb2D;
     private Animator animator;
 
@@ -92,7 +92,7 @@ public class PlayerInputs : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.R) && chargeTime < 2)
         {
-            chargeTime = 0; //This is to make sure that the timer is reset to 0
+            chargeTime = 0; //This is to make sure that the timer is reset to 0 after key is lifted
         }
     }
 }
