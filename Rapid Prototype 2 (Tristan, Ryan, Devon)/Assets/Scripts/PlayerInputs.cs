@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
@@ -9,10 +10,10 @@ public class PlayerInputs : MonoBehaviour
     public float playerSpeed = 1.0f;  //Assigning a speed variable for the player
     public float jumpForce = 2.0f; //Assigning force variable for jumping
     public float gravityForce = 1.0f;
-    private bool facingRight = true; //Bool variable to determine whether the player is facing left or right
+    private bool facingRight = true; //Bool variable to determine whether the player is facing left or right    
 
     //Variables for the charge attack mechanic
-    [SerializeField] Sprite[] knightLib;
+    public Sprite[] knightLib;
     private SpriteRenderer knightSP; 
     public float chargeTime = 0.0f; //variable to keep track of charge time
     private Rigidbody2D rb2D;
@@ -25,6 +26,7 @@ public class PlayerInputs : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();       
         animator = GetComponent<Animator>();   
         knightSP = GetComponent<SpriteRenderer>();
+        knightSP.sprite = knightLib[0];
     }
 
     // Update is called once per frame
@@ -70,6 +72,7 @@ public class PlayerInputs : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             chargeTime += Time.deltaTime; //When R is held down, the charge timer increases
+            knightSP.sprite = knightLib[1];
 
         }
         if (Input.GetKeyUp(KeyCode.R) && chargeTime > 2)
@@ -78,14 +81,13 @@ public class PlayerInputs : MonoBehaviour
             {
                 //When R key is released and the charge time is over 2 seconds
                 rb2D.velocity = Vector2.right * playerSpeed; //The player is propelled to the right by velocity times player speed
-                chargeTime = 0; //Resets timer after release
-
+                chargeTime = 0; //Resets timer after release                
             }
             else if (!facingRight)
             {
                 //When R key is released and the charge time is over 2 seconds
                 rb2D.velocity = Vector2.left * playerSpeed; //The player is propelled to the right by velocity times player speed
-                chargeTime = 0; //Resets timer after release
+                chargeTime = 0; //Resets timer after release                
             }
 
 
@@ -93,6 +95,7 @@ public class PlayerInputs : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.R) && chargeTime < 2)
         {
             chargeTime = 0; //This is to make sure that the timer is reset to 0 after key is lifted
+            knightSP.sprite = knightLib[0];
         }
     }
 }

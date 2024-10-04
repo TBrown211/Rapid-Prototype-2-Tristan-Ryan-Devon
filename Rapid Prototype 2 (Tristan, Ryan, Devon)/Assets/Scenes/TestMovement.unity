@@ -249,9 +249,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 10
-  jumpForce: 10
+  jumpForce: 5
   gravityForce: 1
-  knightLib: []
+  knightLib:
+  - {fileID: 21300000, guid: 84ce2f114ad12bd4ebafc77060220324, type: 3}
+  - {fileID: 21300000, guid: 192eccda280e2ec4c99be851889e09ed, type: 3}
   chargeTime: 0
 --- !u!70 &249941487
 CapsuleCollider2D:
