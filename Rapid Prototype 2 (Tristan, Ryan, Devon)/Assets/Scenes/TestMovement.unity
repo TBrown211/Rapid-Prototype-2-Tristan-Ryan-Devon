@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 249941483}
   - component: {fileID: 249941487}
   - component: {fileID: 249941485}
-  - component: {fileID: 249941486}
   m_Layer: 0
   m_Name: Knight
   m_TagString: Untagged
@@ -254,27 +253,6 @@ MonoBehaviour:
   gravityForce: 1
   knightLib: []
   chargeTime: 0
---- !u!95 &249941486
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 249941479}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 784c58dfe6f4e9c4bb08ae955fbc0f7b, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!70 &249941487
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
