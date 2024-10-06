@@ -8,7 +8,10 @@ public class Breakingwall : MonoBehaviour
 
     {
 
-        if (collision.collider.gameObject.GetComponent<PlayerInputs>());
+        if (collision.collider.gameObject.GetComponent<PlayerInputs>())
+        {
+            Destroy(gameObject);
+        }
 
     }
 }
