@@ -9,8 +9,6 @@ public class ChargeFill : MonoBehaviour
                             //This script I got from watching a tutorial video online 
                             //https://www.youtube.com/watch?v=-UbElCzKwuA
 
-
-
     // Start is called before the first frame update
     void Start()
     {

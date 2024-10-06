@@ -19,7 +19,7 @@ public class PlayerInputs : MonoBehaviour
     private Animator animator;
     public bool isCharging = false; //Create boolean for checking if the player is charging or not
 
-    private ChargeFill chargeFill; //Referencing the charge fill script
+    private ChargeFill chargeFill;
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +28,7 @@ public class PlayerInputs : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();       
         animator = GetComponent<Animator>();   
         knightSP = GetComponent<SpriteRenderer>();        
-        chargeFill = GetComponentInChildren<ChargeFill>();
+       chargeFill = GetComponentInChildren<ChargeFill>();
     }
 
     // Update is called once per frame
@@ -37,8 +37,8 @@ public class PlayerInputs : MonoBehaviour
         PlayerMovement();
         ChargingMechanic();
         animator.SetBool("beginCharging", isCharging); //Setting a boolean for the animator so that if isCharging is true 
-        //Then the beginCharging parameter set in the animation transition will be turned to true, transitioning to the charging animation
-        chargeFill.ChargeBar(chargeTime, 2); //Stating that the current charge equals the charge time that it takes for the player to transition into the attack
+                                                       //Then the beginCharging parameter set in the animation transition will be turned to true, transitioning to the charging animation
+        chargeFill.ChargeBar(chargeTime, 2);
     }
 
     //Function for the main player controller of the game
