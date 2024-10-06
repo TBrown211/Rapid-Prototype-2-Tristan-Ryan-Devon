@@ -19,7 +19,7 @@ public class PlayerInputs : MonoBehaviour
     private Animator animator;
     public bool isCharging = false; //Create boolean for checking if the player is charging or not
 
-    private ChargeFill chargeFill;
+    private ChargeFill chargeFill; //Referencing the charge fill script
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +38,7 @@ public class PlayerInputs : MonoBehaviour
         ChargingMechanic();
         animator.SetBool("beginCharging", isCharging); //Setting a boolean for the animator so that if isCharging is true 
         //Then the beginCharging parameter set in the animation transition will be turned to true, transitioning to the charging animation
-        chargeFill.ChargeBar(chargeTime, 2);
+        chargeFill.ChargeBar(chargeTime, 2); //Stating that the current charge equals the charge time that it takes for the player to transition into the attack
     }
 
     //Function for the main player controller of the game
