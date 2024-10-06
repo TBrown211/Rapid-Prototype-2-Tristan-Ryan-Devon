@@ -12,13 +12,12 @@ public class PlayerInputs : MonoBehaviour
     public float gravityForce = 1.0f;
     private bool facingRight = true; //Bool variable to determine whether the player is facing left or right    
 
-    //Variables for the charge attack mechanic
-    public Sprite[] knightLib; 
+    //Variables for the charge attack mechanic    
     private SpriteRenderer knightSP; //Variable that stores the sprite 
     public float chargeTime = 0.0f; //variable to keep track of charge time
     private Rigidbody2D rb2D;
     private Animator animator;
-    public float animationTimer = 1.0f;
+    private bool isCharging = false; //Create boolean for checking if the player is charging or not
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +32,9 @@ public class PlayerInputs : MonoBehaviour
     void Update()
     {
         PlayerMovement();
-        ChargingMechanic();        
+        ChargingMechanic();
+        animator.SetBool("beginCharging", isCharging); //Setting a boolean for the animator so that if isCharging is true 
+        //Then the beginCharging parameter set in the animation transition will be turned to true, transitioning to the charging animation
     }
 
     //Function for the main player controller of the game
@@ -72,21 +73,25 @@ public class PlayerInputs : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             chargeTime += Time.deltaTime; //When R is held down, the charge timer increases          
-
+            isCharging = true; //If player holds down charging key, then set 
         }
         if (Input.GetKeyUp(KeyCode.R) && chargeTime > 2)
         {
+            isCharging = false;
+
             if (facingRight)
             {
                 //When R key is released and the charge time is over 2 seconds
                 rb2D.velocity = Vector2.right * playerSpeed; //The player is propelled to the right by velocity times player speed
                 chargeTime = 0; //Resets timer after release                
+                animator.SetTrigger("Attack"); //Set trigger for once the R key is released, trigger the attack animation
             }
             else if (!facingRight)
             {
                 //When R key is released and the charge time is over 2 seconds
                 rb2D.velocity = Vector2.left * playerSpeed; //The player is propelled to the right by velocity times player speed
                 chargeTime = 0; //Resets timer after release               
+                animator.SetTrigger("Attack"); //Set trigger for once the R key is released, trigger the attack animation
             }           
 
 
@@ -94,6 +99,7 @@ public class PlayerInputs : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.R) && chargeTime < 2)
         {
             chargeTime = 0; //This is to make sure that the timer is reset to 0 after key is lifted            
+            isCharging = false; //Making sure to reset the boolean if chargeTime doesn't exceed 2 seconds
         }
     }
 }
