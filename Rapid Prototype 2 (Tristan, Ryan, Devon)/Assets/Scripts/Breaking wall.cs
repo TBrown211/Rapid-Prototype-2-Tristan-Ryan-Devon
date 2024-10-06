@@ -4,14 +4,55 @@ using UnityEngine;
 
 public class Breakingwall : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private ParticleSystem particle;
+
+    private SpriteRenderer sr;
+
+    private BoxCollider2D bc;
+
+
+
+    private void Awake()
 
     {
 
-        if (collision.collider.gameObject.GetComponent<PlayerInputs>())
+        particle = GetComponentInChildren<ParticleSystem>();
+
+        sr = GetComponent<SpriteRenderer>();
+
+        bc = GetComponent<BoxCollider2D>();
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+
+    {
+
+        if (other.collider.gameObject.GetComponent<PlayerInputs>())
+
         {
-            Destroy(gameObject);
+
+            StartCoroutine(Break());
+
         }
+
+    }
+
+    private IEnumerator Break()
+
+    {
+
+        particle.Play();
+
+        sr.enabled = false;
+
+        bc.enabled = false;
+
+
+
+        yield return new WaitForSeconds(particle.main.startLifetime.constantMax);
+
+        Destroy(gameObject);
 
     }
 }
