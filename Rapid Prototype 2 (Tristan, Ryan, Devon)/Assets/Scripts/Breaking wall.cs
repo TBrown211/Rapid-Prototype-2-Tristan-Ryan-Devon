@@ -10,7 +10,7 @@ public class Breakingwall : MonoBehaviour
 
     private BoxCollider2D bc;
 
-
+    private AudioSource audioSource;
 
     private void Awake()
 
@@ -22,6 +22,7 @@ public class Breakingwall : MonoBehaviour
 
         bc = GetComponent<BoxCollider2D>();
 
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -48,7 +49,7 @@ public class Breakingwall : MonoBehaviour
 
         bc.enabled = false;
 
-
+        audioSource.Play();
 
         yield return new WaitForSeconds(particle.main.startLifetime.constantMax);
 
