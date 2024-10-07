@@ -38,7 +38,7 @@ public class PlayerInputs : MonoBehaviour
         ChargingMechanic();
         animator.SetBool("beginCharging", isCharging); //Setting a boolean for the animator so that if isCharging is true 
                                                        //Then the beginCharging parameter set in the animation transition will be turned to true, transitioning to the charging animation
-        chargeFill.ChargeBar(chargeTime, 2);
+        chargeFill.ChargeBar(chargeTime, 1.5f);
     }
 
     //Function for the main player controller of the game
@@ -79,7 +79,7 @@ public class PlayerInputs : MonoBehaviour
             chargeTime += Time.deltaTime; //When R is held down, the charge timer increases          
             isCharging = true; //If player holds down charging key, then set             
         }
-        if (Input.GetKeyUp(KeyCode.R) && chargeTime > 2)
+        if (Input.GetKeyUp(KeyCode.R) && chargeTime > 1.5f)
         {
             isCharging = false;
 
@@ -100,7 +100,7 @@ public class PlayerInputs : MonoBehaviour
 
 
         }
-        if (Input.GetKeyUp(KeyCode.R) && chargeTime < 2)
+        if (Input.GetKeyUp(KeyCode.R) && chargeTime < 1.5f)
         {
             chargeTime = 0; //This is to make sure that the timer is reset to 0 after key is lifted            
             isCharging = false; //Making sure to reset the boolean if chargeTime doesn't exceed 2 seconds
