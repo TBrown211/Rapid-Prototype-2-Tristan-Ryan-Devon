@@ -10,6 +10,16 @@ public class Pick_Level : MonoBehaviour
         SceneManager.LoadScene("TestMovement");
     }
 
+    public void Level2() // Loads Level 2
+    {
+        SceneManager.LoadScene("TestMovement");
+    }
+
+    public void Level3() // Loads Level 3
+    {
+        SceneManager.LoadScene("TestMovement");
+    }
+
     public void Help() //Loads Help Screen
     {
         SceneManager.LoadScene("Help Screen");
