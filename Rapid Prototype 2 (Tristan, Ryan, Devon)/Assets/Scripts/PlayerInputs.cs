@@ -18,6 +18,7 @@ public class PlayerInputs : MonoBehaviour
     private Rigidbody2D rb2D;
     private Animator animator;
     public bool isCharging = false; //Create boolean for checking if the player is charging or not
+    private bool isMoving = false; //
 
     private ChargeFill chargeFill;
 
