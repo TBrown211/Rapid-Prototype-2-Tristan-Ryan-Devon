@@ -6553,9 +6553,10 @@ GameObject:
   - component: {fileID: 1019928927}
   - component: {fileID: 1019928929}
   - component: {fileID: 1019928930}
+  - component: {fileID: 1019928931}
   m_Layer: 0
   m_Name: Golden Chest 1 - frame  00
-  m_TagString: Untagged
+  m_TagString: Chest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6677,7 +6678,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.106247604}
@@ -6693,6 +6694,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3333334, y: 0.62083817}
   m_EdgeRadius: 0
+--- !u!114 &1019928931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019928926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23ddc14fa99ec0b40b05919ca5814573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1039887342
 GameObject:
   m_ObjectHideFlags: 0
