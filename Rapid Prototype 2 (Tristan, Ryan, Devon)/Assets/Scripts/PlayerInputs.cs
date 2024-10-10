@@ -13,7 +13,7 @@ public class PlayerInputs : MonoBehaviour
     private bool facingRight = true; //Bool variable to determine whether the player is facing left or right    
 
     //Variables for the charge attack mechanic
-    public Sprite[] knightLib;
+    
     private SpriteRenderer knightSP; 
     public float chargeTime = 0.0f; //variable to keep track of charge time
     private Rigidbody2D rb2D;
@@ -26,7 +26,7 @@ public class PlayerInputs : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();       
         animator = GetComponent<Animator>();   
         knightSP = GetComponent<SpriteRenderer>();
-        knightSP.sprite = knightLib[0];
+        
     }
 
     // Update is called once per frame
@@ -72,7 +72,7 @@ public class PlayerInputs : MonoBehaviour
         if (Input.GetKey(KeyCode.R))
         {
             chargeTime += Time.deltaTime; //When R is held down, the charge timer increases
-            knightSP.sprite = knightLib[1];
+            
 
         }
         if (Input.GetKeyUp(KeyCode.R) && chargeTime > 2)
@@ -95,7 +95,7 @@ public class PlayerInputs : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.R) && chargeTime < 2)
         {
             chargeTime = 0; //This is to make sure that the timer is reset to 0 after key is lifted
-            knightSP.sprite = knightLib[0];
+            
         }
     }
 }
