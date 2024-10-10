@@ -6830,7 +6830,7 @@ GameObject:
   - component: {fileID: 1165408877}
   - component: {fileID: 1165408876}
   - component: {fileID: 1165408875}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Breakable wall yellow (2)
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -7369,7 +7369,7 @@ GameObject:
   - component: {fileID: 1319540350}
   - component: {fileID: 1319540349}
   - component: {fileID: 1319540348}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Breakable wall yellow (1)
   m_TagString: Weapon
   m_Icon: {fileID: 0}
