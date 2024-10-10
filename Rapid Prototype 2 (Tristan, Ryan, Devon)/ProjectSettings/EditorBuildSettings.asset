@@ -6,20 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Scenes/Test Level Tristan.unity
-    guid: 419178c37d6a4c945b0278130d7be19b
-  - enabled: 1
-    path: Assets/Scenes/Help Screen.unity
-    guid: 2a4ebcdd423c1a54cb379ee5c43ddac6
-  - enabled: 1
     path: Assets/Scenes/Menu Screen.unity
     guid: 19732a15d925f7a41b056b86fb37ad34
   - enabled: 1
-    path: Assets/Scenes/TestMovement.unity
-    guid: 80dde06b7be4aeb44a8ed1f212ff5772
+    path: Assets/Scenes/Help Screen.unity
+    guid: 2a4ebcdd423c1a54cb379ee5c43ddac6
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: da21e8b3919d2ce4d849320c9b691ef5
