@@ -7247,6 +7247,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8309601432933187191, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: f15d81a52cb51af4ebfd11e2a69ddf38, type: 2}
+    - target: {fileID: 8309601432933187191, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309601432933187191, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}

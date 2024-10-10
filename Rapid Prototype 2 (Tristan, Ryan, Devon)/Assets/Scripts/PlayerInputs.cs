@@ -39,6 +39,16 @@ public class PlayerInputs : MonoBehaviour
         animator.SetBool("beginCharging", isCharging); //Setting a boolean for the animator so that if isCharging is true 
                                                        //Then the beginCharging parameter set in the animation transition will be turned to true, transitioning to the charging animation
         chargeFill.ChargeBar(chargeTime, 1.5f);
+
+        //Level Boundaries
+        if(transform.position.x < -8.56f)
+        {
+            transform.position = new Vector2(-8.56f, transform.position.y);
+        }
+        if(transform.position.x > 8.45f)
+        {
+            transform.position = new Vector2(8.45f, transform.position.y);
+        }
     }
 
     //Function for the main player controller of the game
