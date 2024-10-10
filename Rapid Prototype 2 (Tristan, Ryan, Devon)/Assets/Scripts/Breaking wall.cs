@@ -29,7 +29,7 @@ public class Breakingwall : MonoBehaviour
 
     {
 
-        if (other.collider.gameObject)
+        if (other.collider.gameObject.CompareTag("Weapon"))
 
         {
 

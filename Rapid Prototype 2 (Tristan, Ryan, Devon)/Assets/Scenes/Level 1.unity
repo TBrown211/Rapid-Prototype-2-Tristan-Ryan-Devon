@@ -5964,7 +5964,7 @@ GameObject:
   - component: {fileID: 846457042}
   m_Layer: 0
   m_Name: Breakable wall yellow
-  m_TagString: Player
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6480,9 +6480,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2246852037305900093, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.9
+      objectReference: {fileID: 0}
     - target: {fileID: 2695080615527841694, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 7550833824444357233, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
       propertyPath: m_IsTrigger
@@ -6534,7 +6538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8397311223141519464, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6706,6 +6710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23ddc14fa99ec0b40b05919ca5814573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isChestOpen: 0
+  animTimer: 0
 --- !u!1 &1039887342
 GameObject:
   m_ObjectHideFlags: 0

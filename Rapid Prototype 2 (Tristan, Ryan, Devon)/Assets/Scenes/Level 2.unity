@@ -6832,7 +6832,7 @@ GameObject:
   - component: {fileID: 1165408875}
   m_Layer: 0
   m_Name: Breakable wall yellow (2)
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7178,6 +7178,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 449978953446776655, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: jumpForce
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246852037305900093, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2695080615527841694, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_TagString
+      value: Weapon
+      objectReference: {fileID: 0}
     - target: {fileID: 8273670868646581355, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.47
@@ -7331,7 +7343,7 @@ GameObject:
   - component: {fileID: 1319540348}
   m_Layer: 0
   m_Name: Breakable wall yellow (1)
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
