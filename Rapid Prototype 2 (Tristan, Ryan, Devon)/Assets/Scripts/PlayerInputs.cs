@@ -10,7 +10,7 @@ public class PlayerInputs : MonoBehaviour
     public float playerSpeed = 1.0f;  //Assigning a speed variable for the player
     public float jumpForce = 2.0f; //Assigning force variable for jumping
     public float gravityForce = 1.0f;
-    private bool facingRight = true; //Bool variable to determine whether the player is facing left or right    
+    private bool facingRight = true; //Bool variable to determine whether the player is facing left or right     
 
     //Variables for the charge attack mechanic    
     private SpriteRenderer knightSP; //Variable that stores the sprite 
@@ -28,7 +28,7 @@ public class PlayerInputs : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();       
         animator = GetComponent<Animator>();   
         knightSP = GetComponent<SpriteRenderer>();        
-       chargeFill = GetComponentInChildren<ChargeFill>();
+       chargeFill = GetComponentInChildren<ChargeFill>();     
     }
 
     // Update is called once per frame

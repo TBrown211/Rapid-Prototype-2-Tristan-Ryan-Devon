@@ -6830,7 +6830,7 @@ GameObject:
   - component: {fileID: 1165408877}
   - component: {fileID: 1165408876}
   - component: {fileID: 1165408875}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Breakable wall yellow (2)
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -7183,8 +7183,20 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2246852037305900093, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246852037305900093, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246852037305900093, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246852037305900093, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 50
+      value: -50
       objectReference: {fileID: 0}
     - target: {fileID: 2695080615527841694, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
       propertyPath: m_TagString
@@ -7229,6 +7241,14 @@ PrefabInstance:
     - target: {fileID: 8273670868646581355, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309601432933187191, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309601432933187191, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8397311223141519464, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
       propertyPath: m_Name
@@ -7341,7 +7361,7 @@ GameObject:
   - component: {fileID: 1319540350}
   - component: {fileID: 1319540349}
   - component: {fileID: 1319540348}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Breakable wall yellow (1)
   m_TagString: Weapon
   m_Icon: {fileID: 0}
