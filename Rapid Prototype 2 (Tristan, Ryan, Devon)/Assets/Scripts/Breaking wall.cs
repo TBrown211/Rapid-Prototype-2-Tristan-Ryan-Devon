@@ -29,7 +29,7 @@ public class Breakingwall : MonoBehaviour
 
     {
 
-        if (other.collider.gameObject.GetComponent<PlayerInputs>())
+        if (other.collider.gameObject.CompareTag("Weapon"))
 
         {
 

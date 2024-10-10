@@ -17,7 +17,7 @@ public class PlayerInputs : MonoBehaviour
     public float chargeTime = 0.0f; //variable to keep track of charge time
     private Rigidbody2D rb2D;
     private Animator animator;
-    public bool isCharging = false; //Create boolean for checking if the player is charging or not
+    public bool isCharging = false; //Create boolean for checking if the player is charging or not    
 
     private ChargeFill chargeFill;
 
