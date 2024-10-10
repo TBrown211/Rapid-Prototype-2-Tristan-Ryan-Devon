@@ -26,7 +26,8 @@ public class OpenChest : MonoBehaviour
     {
         if (collision.collider.gameObject.GetComponent<PlayerInputs>())
         {
-            isChestOpen=true;                       
+            isChestOpen=true;
+            SceneManager.LoadScene("Menu");
         }        
     }
 

@@ -6480,6 +6480,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 449978953446776655, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2246852037305900093, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
       propertyPath: m_LocalPosition.y
       value: 10.9
