@@ -19,18 +19,31 @@ public class OpenChest : MonoBehaviour
     void Update()
     {
         chestAnim.SetBool("chestOpen", isChestOpen);
-        if(animTimer > 5f)
-        {
-            SceneManager.LoadScene("Menu Screen");
-        }        
+        AnimationTimer();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.GetComponent<PlayerInputs>())
         {
-            isChestOpen=true;
-            animTimer += Time.deltaTime;            
+            isChestOpen=true;                       
         }        
+    }
+
+    void AnimationTimer()
+    {
+        if (isChestOpen)
+        {
+            animTimer += Time.deltaTime;
+        }
+        else
+        {
+            animTimer = 0;
+        }
+
+        if(animTimer > 5)
+        {
+            SceneManager.LoadScene("Menu Screen");
+        }
     }
 }
