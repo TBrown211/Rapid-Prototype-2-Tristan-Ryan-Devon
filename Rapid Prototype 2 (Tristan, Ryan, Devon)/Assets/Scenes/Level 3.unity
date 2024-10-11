@@ -5020,7 +5020,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 449978953446776655, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
       propertyPath: jumpForce
-      value: 7
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 449978953446776655, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: playerSpeed
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 2246852037305900093, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5072,6 +5076,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8273670868646581355, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309601432933187191, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309601432933187191, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309601432933187191, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: f15d81a52cb51af4ebfd11e2a69ddf38, type: 2}
+    - target: {fileID: 8309601432933187191, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8309601432933187191, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
+      propertyPath: m_UseAutoMass
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397311223141519464, guid: 0de81bf6fe232814992af5379fcbfa63, type: 3}
