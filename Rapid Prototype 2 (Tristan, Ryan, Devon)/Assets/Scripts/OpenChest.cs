@@ -41,7 +41,7 @@ public class OpenChest : MonoBehaviour
             animTimer = 0;
         }
 
-        if(animTimer > 5)
+        if(animTimer > 1)
         {
             SceneManager.LoadScene("Menu Screen");
         }
