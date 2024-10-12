@@ -10,7 +10,7 @@ Our objective is to combine movement and attack force to a character so the impa
 
 # Design Rational 
 
-What we invision for our design is a 1 screen design to show off the feature of the charge punch that we are going to add. If we have more time, we planned on adding more screens to the first level. 
+What we invision for our design is a 1 screen design to show off the feature of the charge punch that we are going to add. If we have more time, we planned on adding more levels aside from the first level. 
 
 Our charge attack mechanic is innovative mainly for the fact where in most games that implement, involves movement and traversal through levels; whereas our mechanic would allow for not only traversal, but also passing through any obstacles in the player’s path.  
 
